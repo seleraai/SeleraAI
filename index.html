@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELERA - Advanced Roblox Scripting AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --neon-purple: #b026ff;
+            --neon-blue: #4d4dff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            height: 100%;
+            background: linear-gradient(135deg, #0f0f1f, #1a1a3a);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(176, 38, 255, 0.5);
+        }
+
+        .button {
+            padding: 12px 24px;
+            font-size: 1em;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            color: var(--neon-purple);
+            margin-bottom: 10px;
+        }
+
+        .tutorial-step {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+        }
+
+        .tutorial-step h3 {
+            color: var(--neon-blue);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Quick Start Guide</h2>
+            <div class="tutorial-step">
+                <h3>Step 1: Setup</h3>
+                <p>Copy Selera prompt.</p>
+            </div>
+            <div class="tutorial-step">
+                <h3>Step 2: Prompt</h3>
+                <p>paste into an ai (works best with gemini advanced 2.0).</p>
+            </div>
+            <div class="tutorial-step">
+                <h3>Step 3: Customize</h3>
+                <p>Pro</p>
+            </div>
+            <div class="tutorial-step">
+                <h3>Step 4: Generate</h3>
+                <p>ignore what the prompt says just send it.</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="logo">SELERA</div>
+            <button class="button" onclick="copyPrompt()">Copy AI Prompt</button>
+            <div class="features">
+                <div class="feature">
+                    <h3>Smart Scripting</h3>
+                    <p>Advanced AI-powered code generation</p>
+                </div>
+                <div class="feature">
+                    <h3>Roblox Optimized</h3>
+                    <p>Tailored for Roblox Exploiting</p>
+                </div>
+                <div class="feature">
+                    <h3>best one fr</h3>
+                    <p>pro frfr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyPrompt() {
+            const prompt = "SELERA AI: Generate a Roblox script for [YOUR SPECIFIC TASK HERE]";
+            navigator.clipboard.writeText(prompt).then(function() {
+                alert("AI Prompt copied to clipboard!");
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
